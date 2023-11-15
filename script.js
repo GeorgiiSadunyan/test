@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', function () {
         console.log("DOM fully loaded and parsed");
         let b = document.getElementById("button");
         let c = document.getElementById("button2");
-        let d=document.getElementById("tovar");
+        
         b.addEventListener("click", calc);
         c.addEventListener("click", sbros);
 });
