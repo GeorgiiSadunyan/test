@@ -25,5 +25,4 @@ window.addEventListener('DOMContentLoaded', function () {
         let d=document.getElementById("tovar");
         b.addEventListener("click", calc);
         c.addEventListener("click", sbros);
-        d.addEventListener("change",calc);
 });
