@@ -1,28 +1,27 @@
-function calc() {
-        //ссылка на элемент Select (Тип)
-        let type_tovara = document.getElementById("tovar");
-        //ссылка на элемент input (Кол-во)
-        let count = document.getElementById("count");
-        //ссылка на элемент span, в него пишем стоимость
-        let result = document.getElementById("result");
-        let price = 0;
-        price += parseInt(type_tovara.options[type_tovara.selectedIndex].value);
-        if(count.value>0)
-        price = parseInt(count.value) * price;
-        else alert("Укажите верное количество");
-        result.innerHTML = price;
-}
-function sbros()
-{
-        let result = document.getElementById("result");
-        let price=0;
-        result.innerHTML=price;
-}
-window.addEventListener('DOMContentLoaded', function () {
-        console.log("DOM fully loaded and parsed");
-        let b = document.getElementById("button");
-        let c = document.getElementById("button2");
-        
-        b.addEventListener("click", calc);
-        c.addEventListener("click", sbros);
-});
+document.addEventListener('DOMContentLoaded', function() {
+    $(".multiple-items").slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive:[
+            {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2,
+                  infinite: true,
+                  dots: true
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+        ]
+      });
+ }, false);
